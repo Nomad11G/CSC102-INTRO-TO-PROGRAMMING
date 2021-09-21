@@ -8,6 +8,11 @@
     <script>
         alert("This is a test of the alert function");
     </script>
+    <style>
+        body {
+            background-color: forestgreen;
+        }
+    </style>
 </head>
 
 <body>
@@ -19,8 +24,47 @@
     <p>
         Test of paragraph tags
     </p> <br>
-    <button>Start</button>
-    <button>Stop</button>
-</body>
-
+   <button>Start</button> 
+    <button>Stop</button> <br>
+<br>
+    <button>Launch</button>
+    <button>Cancel</button> <br>
+    <br>
+    <p id="countDownTimer">Waiting to start . . . </p>
+    <script>
+       var currTime = 50;
+       document.getElementById("countDownTimer").innerHTML = currTime;
+       setTimeout(function () {       
+            currTime = currTime - 5;
+            document.getElementById("countDownTimer").innerHTML = currTime; }, 1000);  
+            setTimeout(function () {       
+            currTime = currTime - 5;
+            document.getElementById("countDownTimer").innerHTML = currTime; }, 2000);  
+            setTimeout(function () {       
+            currTime = currTime - 5;
+            document.getElementById("countDownTimer").innerHTML = currTime; }, 3000);  
+            setTimeout(function () {       
+            currTime = currTime - 5;
+            document.getElementById("countDownTimer").innerHTML = currTime; }, 4000);  
+            setTimeout(function () {       
+            currTime = currTime - 5;
+            document.getElementById("countDownTimer").innerHTML = currTime; }, 5000);  
+            setTimeout(function () {       
+            currTime = currTime - 5;
+            document.getElementById("countDownTimer").innerHTML = currTime; }, 6000);  
+            setTimeout(function () {       
+            currTime = currTime - 5;
+            document.getElementById("countDownTimer").innerHTML = currTime; }, 7000);  
+            setTimeout(function () {       
+            currTime = currTime - 5;
+            document.getElementById("countDownTimer").innerHTML = currTime; }, 8000);  
+            setTimeout(function () {       
+            currTime = currTime - 5;
+            document.getElementById("countDownTimer").innerHTML = currTime; }, 9000);  
+            setTimeout(function () {       
+            currTime = currTime - 5;
+            document.getElementById("countDownTimer").innerHTML = "Blastoff!"; }, 10000);  
+   
+   </script>
+                                                                                                                       
 </html>
