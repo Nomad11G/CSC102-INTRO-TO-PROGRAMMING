@@ -6,9 +6,6 @@
     <title>
         CSC102 Justin Lubitz's Page
     </title>
-    <script>
-        //alert("This is a test of the alert function");
-    </script>
     <style>
         body {
             background-color: rgb(187, 36, 179);
@@ -25,49 +22,20 @@
     <p>
         Test of paragraph tags
     </p> <br>
-   <button>Start</button> 
+   <button onclick="btrBlastOff();">Start</button> 
     <button>Stop</button> <br>
 <br>
     <button>Launch</button>
     <button>Cancel</button> <br>
     <br>
     <p id="countDownTimer">Waiting to start . . . </p>
-    <script>
-       var currTime = 50;
-       document.getElementById("countDownTimer").innerHTML = currTime;
-       setTimeout(function () {       
-            currTime = currTime - 5;
-            document.getElementById("countDownTimer").innerHTML = currTime; }, 1000);  
-            setTimeout(function () {       
-            currTime = currTime - 5;
-            document.getElementById("countDownTimer").innerHTML = currTime; }, 2000);  
-            setTimeout(function () {       
-            currTime = currTime - 5;
-            document.getElementById("countDownTimer").innerHTML = currTime; }, 3000);  
-            setTimeout(function () {       
-            currTime = currTime - 5;
-            document.getElementById("countDownTimer").innerHTML = currTime; }, 4000);  
-            setTimeout(function () {       
-            currTime = currTime - 5;
-            document.getElementById("countDownTimer").innerHTML = currTime; }, 5000);  
-            setTimeout(function () {       
-            currTime = currTime - 5;
-            document.getElementById("countDownTimer").innerHTML = currTime; }, 6000);  
-            setTimeout(function () {       
-            currTime = currTime - 5;
-            document.getElementById("countDownTimer").innerHTML = currTime; }, 7000);  
-            setTimeout(function () {       
-            currTime = currTime - 5;
-            document.getElementById("countDownTimer").innerHTML = currTime; }, 8000);  
-            setTimeout(function () {       
-            currTime = currTime - 5;
-            document.getElementById("countDownTimer").innerHTML = currTime; }, 9000);  
-            setTimeout(function () {       
-            currTime = currTime - 5;
-            document.getElementById("countDownTimer").innerHTML = "Blastoff!"; }, 10000);  
-   
-   </script>
+    <br>
+    <br>
    <button onclick="playCraps();">Play Craps!</button>
+   <p id="die1Res">Die 1...</p>
+   <p id="die2Res">Die 2...</p>
+   <p id="sum1Res">Sum...</p>
+   <p id="finalRes">Win, Lose, or Draw...</p>
  </body>
 
 </html>

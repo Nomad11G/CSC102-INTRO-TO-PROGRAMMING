@@ -1,24 +1,84 @@
 function playCraps() {
     console.log("playCraps() started");
-    var die1 = Math.ceil(Math.random() * 6);     //selected random number between 0 and 1, multiplied by 6, rounded up and stored in die1
-    var die2 = Math.ceil(Math.random() * 6);     //selected random number between 0 and 1, multiplied by 6, rounded up and stored in die2
-    var sum = die1 + die2                        //the sum of the both die1 and die2 are added together for an overall total
-    document.write("Die 1 = " + die1)            //shows the number that was generated in the function of die1 as Die 1= (number)
-    document.write("<br/>")                      //creates a line break at the end of the text
-    document.write("Die 2 = " + die2)            //shows the number that was generated in the function of Die2 as Die 2= (number)
-    document.write("<br/>")                      //creates a line break at the end of the text
-    document.write("Sum = " + sum)               //displays  the total from adding die1 and die2
-    document.write("<br/>")                      //creates a line break at the end of the text
-    if (sum == 7 || sum == 11){                  //function of if the total of die1 and die2 equals 7 or 11
-        document.write("CRAPS - you lose")       //continue of previous line, then it would display the phrase, "CRAPS - you lose"
-        document.write("<br/>")                  //creates a line break at the end of the text
+    var die1 = Math.ceil(Math.random() * 6);
+    var die2 = Math.ceil(Math.random() * 6);
+    var sum = die1 + die2
+    document.getElementById("die1Res").innerHTML = die1;
+    document.getElementById("die2Res").innerHTML = die2;
+    document.getElementById("sum1Res").innerHTML = sum;
+    if (sum == 7 || sum == 11) {
+        document.getElementById("finalRes").innerHTML =
+            "Craps - you lose";
     }
-    else if (die1 == die2 && die1 % 2 == 0){     //function showing if die1 and die2 equal each other, than
-        document.write("DOUBLES - you win")      //continue of previous line, then it will diesplay the phrase, "DOUBLES - you win"
-        document.write("<br/>")                  //creates a line break at the end of the text
-    } 
-    else {                                       //function stating that if the total didnt fall under the previous functions, then
-        document.write("Draw - you did not win or lose, please try again")  //continue of previous line, it will display the phrase, "Draw - you did not win or lose, please try again"
-        document.write("<br/>")                  //creates a line break at the end of the text
+    else if (die1 == die2 && die1 % 2 == 0) {
+        document.getElementById("finalRes").innerHTML =
+            "Doubles - you win";
+    }
+    else {
+        document.getElementById("finalRes").innerHTML =
+            "Draw - you did not win or lose, please try again";
+    }
+}
+
+function blastOff() {
+    var currTime = 50;
+    document.getElementById("countDownTimer").innerHTML = currTime;
+    setTimeout(function () {
+        currTime = currTime - 5;
+        document.getElementById("countDownTimer").innerHTML = currTime;
+    }, 1000);
+    setTimeout(function () {
+        currTime = currTime - 5;
+        document.getElementById("countDownTimer").innerHTML = currTime;
+    }, 2000);
+    setTimeout(function () {
+        currTime = currTime - 5;
+        document.getElementById("countDownTimer").innerHTML = currTime;
+    }, 3000);
+    setTimeout(function () {
+        currTime = currTime - 5;
+        document.getElementById("countDownTimer").innerHTML = currTime;
+    }, 4000);
+    setTimeout(function () {
+        currTime = currTime - 5;
+        document.getElementById("countDownTimer").innerHTML = currTime;
+    }, 5000);
+    setTimeout(function () {
+        currTime = currTime - 5;
+        document.getElementById("countDownTimer").innerHTML = currTime;
+    }, 6000);
+    setTimeout(function () {
+        currTime = currTime - 5;
+        document.getElementById("countDownTimer").innerHTML = currTime;
+    }, 7000);
+    setTimeout(function () {
+        currTime = currTime - 5;
+        document.getElementById("countDownTimer").innerHTML = currTime;
+    }, 8000);
+    setTimeout(function () {
+        currTime = currTime - 5;
+        document.getElementById("countDownTimer").innerHTML = currTime;
+    }, 9000);
+    setTimeout(function () {
+        currTime = currTime - 5;
+        document.getElementById("countDownTimer").innerHTML = "Blastoff!";
+    }, 10000);
+}
+
+function btrBlastOff(){
+    console.log("btrBlastOff() started");
+    var currTime = 50
+    for(var i = 0; i <= 10; i = i + 1){
+        setTimeout(function(){
+        if(currTime > 25 ){
+            document.getElementById("countDownTimer").innerHTML = currTime;  
+        } else if(currTime == 0) {
+            document.getElementById("countDownTimer").innerHTML = "BlastOff!";
+        } else {
+            document.getElementById("countDownTimer").innerHTML = 
+                "Warning, Less Than 1/2 Way To Launch, Time Left = " + currTime;
+             }
+            currTime = currTime - 5;
+        },2000 * i);
     }
 }
