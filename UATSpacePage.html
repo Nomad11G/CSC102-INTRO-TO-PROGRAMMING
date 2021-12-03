@@ -3,6 +3,7 @@
 
 <head>
     <script src="code.js"></script>
+    <script src="class.js"></script>
     <link href="style.css" rel="stylesheet" type="text/css" />
     <title>
         CSC102 Justin Lubitz's Page
@@ -44,8 +45,8 @@
         </tbody>
     </table>
      <br>
-    <button id="startButton" class="button" onclick="start();">Start</button>
-    <button id="stopButton" class="button" onclick="stop();">Stop</button> <br>
+    <button id="startButton" class="button" onclick="start(btrBlastOff);">Start</button>
+    <button id="stopButton" class="button" onclick="stop(btrBlastOff);">Stop</button> <br>
     <br>
     <br>
     <p id="countDownTimer">Waiting to start . . . </p>
@@ -56,6 +57,23 @@
     <p id="die2Res">Die 2...</p>
     <p id="sum1Res">Sum...</p>
     <p id="finalRes">Win, Lose, or Draw...</p>
+    <br>
+    <br>
+
+    <br>
+    <br>
+    <script>
+        var fallLaunch = new Mission(75, 100, 25, "Fiona", 31, "October", 2021, 5);
+        var springLaunch = new Mission(25, 50, 5, "Polaris", 12, "April", 2022, 3);
+    </script>
+    <button class="button" onclick="launchFall();">Launch Fall Mission</button>
+    <button class="button" onclick="displayFall();">Display Fall Mission</button><br>
+    <br>
+    <button class="lgbutton" onclick="launchSpring();">Launch Spring Mission</button>
+    <button class="lgbutton" onclick="displaySpring();">Display Spring Mission</button><br>
+    <br>
+    <button class="lgbutton" onclick="playStation();">Play Spacestation Sounds</button><br>
+    <button class="lgbutton" onclick="playBowie();">Play David Bowie</button><br>
 </body>
 
 </html>

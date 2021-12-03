@@ -94,3 +94,30 @@ function stop(){
     document.getElementById("startButton").disabled = false;
     document.getElementById("stopButton").disabled = true;
 }
+
+function playStation(){
+    console.log("playStation() started");
+    mySound = new sound("us-lab-background.mp3");
+    mySound.play();
+}
+
+function sound(srcFile){
+    this.sound = document.createElement("audio");
+    this.sound.src = srcFile;
+    //this.sound.setAttribute("preload", "audio");
+    //this.sound.setAttribute("controls", "none");
+    //this.sound.style.display = "none";
+    //document.body.appendChild(this.sound);
+    this.play = function(){
+        this.sound.play();
+    }
+    this.stop = function(){
+        this.sound.pause();
+    }
+}
+
+function playBowie(){
+    console.log("playBowie() started");
+    mySound = new sound("DB-Space-Oditty.mp3")
+    mySound.play();
+}
